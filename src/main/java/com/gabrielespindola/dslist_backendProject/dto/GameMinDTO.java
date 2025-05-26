@@ -10,6 +10,9 @@ public class GameMinDTO {
 	private Integer year;
 	private String imgUrl;
 	private String shortDescription;
+	
+	public GameMinDTO() {
+	}
 
 	public GameMinDTO(Game entity) {
 		id = entity.getId();
