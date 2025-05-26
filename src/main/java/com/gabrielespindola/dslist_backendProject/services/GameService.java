@@ -11,6 +11,7 @@ import com.gabrielespindola.dslist_backendProject.dto.GameDTO;
 import com.gabrielespindola.dslist_backendProject.dto.GameMinDTO;
 import com.gabrielespindola.dslist_backendProject.entities.Game;
 import com.gabrielespindola.dslist_backendProject.projections.GameMinProjection;
+import com.gabrielespindola.dslist_backendProject.repositories.GameListRepository;
 import com.gabrielespindola.dslist_backendProject.repositories.GameRepository;
 
 
@@ -19,6 +20,9 @@ public class GameService {
 
 	@Autowired
 	private GameRepository gameRepository;
+	
+	@Autowired
+	private GameListRepository gameListRepository;
 
 	@Transactional(readOnly = true)
 	public GameDTO findById(@PathVariable Long listId) {
@@ -36,5 +40,21 @@ public class GameService {
 	public List<GameMinDTO> findByGameList(Long listId) {
 		List<GameMinProjection> games = gameRepository.searchByList(listId);
 		return games.stream().map(GameMinDTO::new).toList();
+	}
+	
+	@Transactional
+	public void move(Long listId, int sourceIndex, int destinationIndex) {
+
+		List<GameMinProjection> list = gameRepository.searchByList(listId);
+
+		GameMinProjection obj = list.remove(sourceIndex);
+		list.add(destinationIndex, obj);
+
+		int min = sourceIndex < destinationIndex ? sourceIndex : destinationIndex;
+		int max = sourceIndex < destinationIndex ? destinationIndex : sourceIndex;
+
+		for (int i = min; i <= max; i++) {
+			gameListRepository.updateBelongingPosition(listId, list.get(i).getId(), i);
+		}
 	}
 }
