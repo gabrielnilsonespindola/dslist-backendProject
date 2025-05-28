@@ -1,4 +1,4 @@
-# Projeto DSList 🎮
+# Projeto DSList 
 
 # Sobre o Projeto
 DsList é uma aplicação backend desenvolvida durante o evento Intensivão JavaSpring, promovido pela DevSuperior.
@@ -11,7 +11,7 @@ A aplicação consiste em uma pesquisa de preferência de games, onde o usuário
 # Tecnologias Utilizadas 
 
 
-# Back end 💻
+# Back end 
 
 ●Java
 
@@ -21,18 +21,18 @@ A aplicação consiste em uma pesquisa de preferência de games, onde o usuário
 
 ● Maven
 
-# Banco de dados 🗃️
+# Banco de dados 
 
 ● PostgreSQL
 
 ● H2 (Ambiente de Desenvolvimento)
 
-# Outros ⚙️
+# Outros 
 
 ● Postman
 
 
-# 📦 Como executar o projeto
+# Como executar o projeto
 # Back end
 
 Pré-requisitos: Java 17
@@ -49,10 +49,10 @@ cd dslist-backendProject
 
 ./mvnw spring-boot:run
 
-# 📫 Importando a collection do Postman
+# Importando a collection do Postman
 Para facilitar os testes dos endpoints da API, este projeto inclui uma collection do Postman.
 
-# 📥 Como importar:
+# Como importar:
 
 ● Abra o Postman
 
@@ -69,7 +69,7 @@ Para facilitar os testes dos endpoints da API, este projeto inclui uma collectio
 
 
 
-# 👨‍💻 Autor : 
+# Autor : 
 
 Gabriel Nilson Espindola
 
