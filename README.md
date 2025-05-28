@@ -69,7 +69,9 @@ Para facilitar os testes dos endpoints da API, este projeto inclui uma collectio
 
 
 
-# 👨‍💻 Autor : Gabriel Nilson Espindola
+# 👨‍💻 Autor : 
+
+Gabriel Nilson Espindola
 
 🔗 https://www.linkedin.com/in/gabriel-nilson-espindola-065694297/
 
