@@ -5,6 +5,8 @@ DsList é uma aplicação backend desenvolvida durante o evento Intensivão Java
 
 A aplicação consiste em uma pesquisa de preferência de games, onde o usuário pode visualizar detalhes sobre cada jogo, como o título, a categoria e a descrição. Além disso, é possível reorganizar a ordem dos games em sua lista pessoal, conforme sua preferência.
 
+O sistema foi desenvolvido utilizando o framework Spring Boot, com foco em boas práticas de API REST, validações de dados, organização de entidades e clareza nas regras de domínio. Ele também pode ser facilmente integrado a sistemas frontend ou aplicativos mobile.
+
 # Modelo de Domínio :
 ![image](https://github.com/user-attachments/assets/d0335e14-f419-4dd7-a5e5-5fe9fbf69234)
 
